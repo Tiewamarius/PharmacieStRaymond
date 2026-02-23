@@ -9,7 +9,7 @@
         <!-- SIDEBAR -->
         <div class="account-sidebar">
             <div class="profile-image">
-                <img src="{{ asset('img/default-user.png') }}" alt="Photo profil" id="profilePreview">
+                <img src="{{ asset('Img/imgProfile.jpg') }}" alt="Photo profil" id="profilePreview">
                 <input type="file" id="profileImageInput" hidden>
                 <button onclick="document.getElementById('profileImageInput').click()">
                     Changer photo
@@ -35,8 +35,9 @@
             <div class="tab-content active" id="profile">
                 <h2>Mes informations personnelles</h2>
 
-                <form method="POST" action="#">
+                <form method="post" action="{{ route('profile.update') }}">
                     @csrf
+                    @method('PATCH')
 
                     <div class="form-group">
                         <label>Nom complet</label>
@@ -50,12 +51,12 @@
 
                     <div class="form-group">
                         <label>Téléphone</label>
-                        <input type="text" name="phone" placeholder="Votre numéro">
+                        <input type="text" name="phone" value="{{ Auth::user()->phone }}" placeholder=" Votre numéro">
                     </div>
 
                     <div class="form-group">
                         <label>Adresse</label>
-                        <input type="text" name="address" placeholder="Votre adresse">
+                        <input type="text" name="adress" value="{{ Auth::user()->adress }}" placeholder="Votre adresse">
                     </div>
 
                     <button type="submit" class="btn-primary">

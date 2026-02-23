@@ -28,7 +28,6 @@ body {
     overflow-x: hidden;
 }
 #accueil{
-background-image: url('../Img/banner02.jpg');
     background-size: cover;        /* Makes image cover entire container */
     background-position: center;   /* Centers the image */
     background-repeat: no-repeat;
@@ -220,16 +219,36 @@ background-image: url('../Img/banner02.jpg');
     height: 100vh;
     margin-top: 80px;
     padding: 80px 0;
-    align-items: center;
-    /* Centre verticalement */
-    justify-content: center;
-    /* Centre horizontalement */
+    position: relative;
     text-align: center;
+    overflow: hidden;
+    background:url('../Img/banner02.jpg');
+
+    background-image: url('/images/banner02.jpg') center/cover no-repeat;
+
+    /* height: 100vh;
+    margin-top: 80px;
+    padding: 80px 0;
+    align-items: center; */
+    /* Centre verticalement */
+    /* justify-content: center; */
+    /* Centre horizontalement */
+    /* text-align: center;
     position: relative;
     background: linear-gradient(135deg, #f0fdfa 0%, #ecfeff 100%);
-    overflow: hidden;
+    overflow: hidden; */
 }
 
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0, 31, 63, 0.75),
+        rgba(0, 31, 63, 0.65)
+    );
+}
 .hero-bg {
     position: absolute;
     top: 0;
@@ -242,10 +261,10 @@ background-image: url('../Img/banner02.jpg');
 }
 
 .hero-content {
-    width: 70%;
     align-items: center;
-    background: rgba(255, 255, 255, 0.052); /* fond semi-transparent */
-    backdrop-filter: blur(8px);          /* effet flou */
+    background: rgba(255, 255, 255, 0.12);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255,255,255,0.2);          /* effet flou */
     -webkit-backdrop-filter: blur(10px);  /* support Safari */
     padding: 1rem;
     border-radius: 5px;
@@ -269,14 +288,16 @@ background-image: url('../Img/banner02.jpg');
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1.5rem;
-    color: var(--text-dark);
+    color: #FFFFFF;
+    /* color: var(--text-dark); */
 }
 
 .hero-description {
     text-align: center;
     /* Aligne le texte au milieu */
     font-size: 1.1rem;
-    color: var(--text-light);
+    color: rgba(255,255,255,0.9);
+    /* color: var(--text-light); */
     margin-bottom: 2rem;
 
     /* Ces deux lignes sont cruciales pour centrer le bloc lui-même */

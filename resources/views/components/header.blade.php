@@ -23,7 +23,7 @@
             <nav class="nav" id="nav">
                 <a href="{{ url('/') }}" class="nav-link">Accueil</a>
                 <a href="{{ url('/services') }}" class="nav-link">Services</a>
-                <a href="{{ url('/produits') }}" class="nav-link">Produits</a>
+                <a href="{{ url('/p-search_res-ltas') }}" class="nav-link">Produits</a>
                 <a href="{{ url('/conseil') }}" class="nav-link">Conseil</a>
                 <a href="{{ url('/contact') }}" class="nav-link">Contact</a>
                 <a href="{{ url('/index.html-pharm_Gard') }}" class="nav-link garde-link">Pharmacie de Garde</a>
