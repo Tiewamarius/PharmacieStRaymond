@@ -50,4 +50,19 @@ class User extends Authenticatable
     {
         return $this->hasMany(Prescription::class, 'validated_by');
     }
+
+    public function loyalty()
+    {
+        return $this->hasOne(LoyaltyPoint::class);
+    }
+
+    public function loyaltyTransactions()
+    {
+        return $this->hasMany(LoyaltyTransaction::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }

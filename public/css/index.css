@@ -336,7 +336,7 @@ body {
 .hero {
     height: 100vh;
     margin-top: 80px;
-    padding: 80px 0;
+    padding: 50px 0;
     position: relative;
     text-align: center;
     overflow: hidden;
@@ -351,10 +351,10 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
+    /* background: linear-gradient(
         rgba(0, 31, 63, 0.75),
         rgba(0, 31, 63, 0.65)
-    );
+    ); */
 }
 .hero-bg {
     position: absolute;
@@ -649,6 +649,14 @@ section {
     border-radius: 16px;
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    text-align: center; 
+}
+.service-link {
+    
+    text-decoration: none; 
+}
+.service-card:active {
+    transform: scale(0.98);
 }
 
 .service-card:hover {
@@ -659,6 +667,7 @@ section {
 }
 
 .service-icon {
+    margin: 0 auto 1.5rem auto; 
     width: 70px;
     height: 70px;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
@@ -669,6 +678,7 @@ section {
     margin-bottom: 1.5rem;
     color: white;
 }
+
 
 .service-icon svg {
     width: 35px;

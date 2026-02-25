@@ -21,6 +21,7 @@ return new class extends Migration
             $table->enum('role', ['Sup-admin', 'Admin', 'Pharmacien', 'Preparateur', 'Client'])->default('Client'); // admin, client, pharmacist
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('loyalty_tier', ['bronze', 'silver', 'gold'])->default('bronze');
             $table->rememberToken();
             $table->timestamps();
         });
