@@ -11,7 +11,7 @@ class IsAdmin
     public function handle(Request $request, Closure $next): Response
     {
         // Vérifie si l'utilisateur est connecté ET si son rôle est 'Admin'
-        if ($request->user()?->role !== 'Admin') {
+        if ($request->user()?->role === 'Client') {
             abort(403, 'Accès réservé aux Administrateurs');
         }
         return $next($request);

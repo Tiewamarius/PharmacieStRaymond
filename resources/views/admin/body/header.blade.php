@@ -4,7 +4,12 @@
             <ul class="list-unstyled topnav-menu mb-0 d-flex align-items-center">
                 <li>
                     <button class="button-toggle-menu nav-link ps-0">
-                        <i data-feather=" menu" class="noti-icon" style="background-color: red;"></i>
+                        <!-- <i data-feather=" menu" class="noti-icon" style="background-color: red;"></i> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu noti-icon">
+                            <line x1="3" y1="12" x2="21" y2="12"></line>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <line x1="3" y1="18" x2="21" y2="18"></line>
+                        </svg>
                     </button>
                 </li>
                 <li class=" d-none d-lg-block">
@@ -25,7 +30,10 @@
 
                 <li class="dropdown notification-list topbar-dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                        <i data-feather="bell" class="noti-icon"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell noti-icon">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                        </svg>
                         <span class="badge bg-danger rounded-circle noti-icon-badge">9</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end dropdown-lg">
@@ -41,102 +49,122 @@
                             </h5>
                         </div>
 
-                        <div class="noti-scroll" data-simplebar>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary active">
-                                <div class="notify-icon">
-                                    <img src="{{ asset('Backendtheme/assets/images/users/user-12.jpg')}}" class="img-fluid rounded-circle" alt="" />
+                        <div class="noti-scroll" data-simplebar="init">
+                            <div class="simplebar-wrapper" style="margin: 0px;">
+                                <div class="simplebar-height-auto-observer-wrapper">
+                                    <div class="simplebar-height-auto-observer"></div>
                                 </div>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <p class="notify-details">Carl Steadham</p>
-                                    <small class="text-muted">5 min ago</small>
-                                </div>
-                                <p class="mb-0 user-msg">
-                                    <small class="fs-14">Completed <span class="text-reset">Improve workflow in Figma</span></small>
-                                </p>
-                            </a>
+                                <div class="simplebar-mask">
+                                    <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                        <div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: auto; overflow: hidden;">
+                                            <div class="simplebar-content" style="padding: 0px;">
 
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary">
-                                <div class="notify-icon">
-                                    <img src="assets/images/users/user-2.jpg" class="img-fluid rounded-circle" alt="" />
-                                </div>
-                                <div class="notify-content">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p class="notify-details">Olivia McGuire</p>
-                                        <small class="text-muted">1 min ago</small>
-                                    </div>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary active">
+                                                    <div class="notify-icon">
+                                                        <img src="assets/images/users/user-12.jpg" class="img-fluid rounded-circle" alt="">
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <p class="notify-details">Carl Steadham</p>
+                                                        <small class="text-muted">5 min ago</small>
+                                                    </div>
+                                                    <p class="mb-0 user-msg">
+                                                        <small class="fs-14">Completed <span class="text-reset">Improve workflow in Figma</span></small>
+                                                    </p>
+                                                </a>
 
-                                    <div class="d-flex mt-2 align-items-center">
-                                        <div class="notify-sub-icon">
-                                            <i class="mdi mdi-download-box text-dark"></i>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary">
+                                                    <div class="notify-icon">
+                                                        <img src="assets/images/users/user-2.jpg" class="img-fluid rounded-circle" alt="">
+                                                    </div>
+                                                    <div class="notify-content">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <p class="notify-details">Olivia McGuire</p>
+                                                            <small class="text-muted">1 min ago</small>
+                                                        </div>
+
+                                                        <div class="d-flex mt-2 align-items-center">
+                                                            <div class="notify-sub-icon">
+                                                                <i class="mdi mdi-download-box text-dark"></i>
+                                                            </div>
+
+                                                            <div>
+                                                                <p class="notify-details mb-0">dark-themes.zip</p>
+                                                                <small class="text-muted">2.4 MB</small>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </a>
+
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary">
+                                                    <div class="notify-icon">
+                                                        <img src="assets/images/users/user-3.jpg" class="img-fluid rounded-circle" alt="">
+                                                    </div>
+                                                    <div class="notify-content">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <p class="notify-details">Travis Williams</p>
+                                                            <small class="text-muted">7 min ago</small>
+                                                        </div>
+                                                        <p class="noti-mentioned p-2 rounded-2 mb-0 mt-2"><span class="text-primary">@Patryk</span> Please make sure that you're....</p>
+                                                    </div>
+                                                </a>
+
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary">
+                                                    <div class="notify-icon">
+                                                        <img src="assets/images/users/user-8.jpg" class="img-fluid rounded-circle" alt="">
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <p class="notify-details">Violette Lasky</p>
+                                                        <small class="text-muted">5 min ago</small>
+                                                    </div>
+                                                    <p class="mb-0 user-msg">
+                                                        <small class="fs-14">Completed <span class="text-reset">Create new components</span></small>
+                                                    </p>
+                                                </a>
+
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary">
+                                                    <div class="notify-icon">
+                                                        <img src="assets/images/users/user-5.jpg" class="img-fluid rounded-circle" alt="">
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-between">
+                                                        <p class="notify-details">Ralph Edwards</p>
+                                                        <small class="text-muted">5 min ago</small>
+                                                    </div>
+                                                    <p class="mb-0 user-msg">
+                                                        <small class="fs-14">Completed <span class="text-reset">Improve workflow in React</span></small>
+                                                    </p>
+                                                </a>
+
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary">
+                                                    <div class="notify-icon">
+                                                        <img src="assets/images/users/user-6.jpg" class="img-fluid rounded-circle" alt="">
+                                                    </div>
+                                                    <div class="notify-content">
+                                                        <div class="d-flex align-items-center justify-content-between">
+                                                            <p class="notify-details">Jocab jones</p>
+                                                            <small class="text-muted">7 min ago</small>
+                                                        </div>
+                                                        <p class="noti-mentioned p-2 rounded-2 mb-0 mt-2"><span class="text-reset">@Patryk</span> Please make sure that you're....</p>
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </div>
-
-                                        <div>
-                                            <p class="notify-details mb-0">dark-themes.zip</p>
-                                            <small class="text-muted">2.4 MB</small>
-                                        </div>
                                     </div>
-
                                 </div>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary">
-                                <div class="notify-icon">
-                                    <img src="assets/images/users/user-3.jpg" class="img-fluid rounded-circle" alt="" />
-                                </div>
-                                <div class="notify-content">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p class="notify-details">Travis Williams</p>
-                                        <small class="text-muted">7 min ago</small>
-                                    </div>
-                                    <p class="noti-mentioned p-2 rounded-2 mb-0 mt-2"><span class="text-primary">@Patryk</span> Please make sure that you're....</p>
-                                </div>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary">
-                                <div class="notify-icon">
-                                    <img src="assets/images/users/user-8.jpg" class="img-fluid rounded-circle" alt="" />
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <p class="notify-details">Violette Lasky</p>
-                                    <small class="text-muted">5 min ago</small>
-                                </div>
-                                <p class="mb-0 user-msg">
-                                    <small class="fs-14">Completed <span class="text-reset">Create new components</span></small>
-                                </p>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary">
-                                <div class="notify-icon">
-                                    <img src="assets/images/users/user-5.jpg" class="img-fluid rounded-circle" alt="" />
-                                </div>
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <p class="notify-details">Ralph Edwards</p>
-                                    <small class="text-muted">5 min ago</small>
-                                </div>
-                                <p class="mb-0 user-msg">
-                                    <small class="fs-14">Completed <span class="text-reset">Improve workflow in React</span></small>
-                                </p>
-                            </a>
-
-                            <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item text-muted link-primary">
-                                <div class="notify-icon">
-                                    <img src="assets/images/users/user-6.jpg" class="img-fluid rounded-circle" alt="" />
-                                </div>
-                                <div class="notify-content">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <p class="notify-details">Jocab jones</p>
-                                        <small class="text-muted">7 min ago</small>
-                                    </div>
-                                    <p class="noti-mentioned p-2 rounded-2 mb-0 mt-2"><span class="text-reset">@Patryk</span> Please make sure that you're....</p>
-                                </div>
-                            </a>
+                                <div class="simplebar-placeholder" style="width: 0px; height: 0px;"></div>
+                            </div>
+                            <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                                <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+                            </div>
+                            <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
+                                <div class="simplebar-scrollbar" style="height: 0px; display: none;"></div>
+                            </div>
                         </div>
 
                         <!-- All-->
@@ -150,7 +178,7 @@
 
                 <li class="dropdown notification-list topbar-dropdown">
                     <a class="nav-link dropdown-toggle nav-user me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                        <img src="{{ asset('Backendtheme/assets/images/users/user-11.jpg')}}" alt="user-image" class="rounded-circle">
+                        <img src="{{ asset('Backendtheme/assets/images/users/adminImg.jpg')}}" alt="user-image" class="rounded-circle">
                         <span class="pro-user-name ms-1">
                             {{ Str::before(Auth::user()->name, ' ') }}<i class="mdi mdi-chevron-down"></i>
                         </span>

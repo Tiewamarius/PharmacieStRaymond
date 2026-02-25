@@ -15,7 +15,7 @@ File: Main Css File
  */
 :root,
 [data-bs-theme=light] {
-  --bs-blue: #537AEF;
+  --bs-blue: #2a4eff;
   --bs-indigo: #522c8f;
   --bs-purple: #8c57d1;
   --bs-pink: #963b68;
@@ -24,7 +24,7 @@ File: Main Css File
   --bs-yellow: #eb9d59;
   --bs-green: #29aa85;
   --bs-teal: #5be7bd;
-  --bs-cyan: #62B7E5;
+  --bs-cyan: #0ab462;
   --bs-black: #000;
   --bs-white: #fff;
   --bs-gray: #6c757d;
@@ -179,7 +179,7 @@ File: Main Css File
   --bs-link-hover-color: #8bb9fe;
   --bs-link-color-rgb: 110, 168, 254;
   --bs-link-hover-color-rgb: 139, 185, 254;
-  --bs-code-color: #e685b5;
+  --bs-code-color: #f73194;
   --bs-highlight-color: #dee2e6;
   --bs-highlight-bg: #664d03;
   --bs-border-color: #495057;

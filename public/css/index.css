@@ -53,12 +53,14 @@ body {
     width: 100%;
     background: #16a34a; /* Vert moderne */
     color: white;
+
+    overflow: hidden;
     z-index: 9999;
     animation: pulseGreen 2.5s ease-in-out infinite;
 }
 
 .garde-content {
-    max-width: 1200px;
+   width: 100%;
     margin: 0 auto;
     padding: 12px 20px;
     display: flex;
@@ -107,6 +109,84 @@ body {
     padding: 1rem 0;
 }
 
+
+/* Icônes */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+.garde-marquee {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    .garde-marquee span {
+        display: inline-block;
+        padding-left: 100%;
+        animation: defilement 12s linear infinite;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    @keyframes defilement {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    /* Affiche le burger */
+    .mobile-menu-btn {
+        display: flex;
+        z-index: 1100;
+    }
+
+    /* Menu mobile slide */
+    .nav {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 260px;
+        height: 100vh;
+        background: white;
+        padding: 100px 25px;
+        flex-direction: column;
+        gap: 1.5rem;
+        transition: 0.3s ease;
+        box-shadow: 5px 0 20px rgba(0,0,0,0.1);
+    }
+
+    .nav.active {
+        left: 0;
+    }
+
+    /* Centrer le logo */
+    .header-content {
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        left: 25%;
+        transform: translateX(-50%);
+    }
+
+    /* Icônes à droite */
+    .header-actions {
+        gap: 16px;
+    }
+
+    /* Supprimer texte des icônes */
+    .action-item span {
+        display: none;
+    }
+}
 .logo {
     display: flex;
     align-items: center;
@@ -157,6 +237,19 @@ body {
     transition: color 0.3s ease;
     position: relative;
 }
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* espace entre menu et icônes */
+}
+.textCompt {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
 
 .nav-link::after {
     content: '';
@@ -196,6 +289,31 @@ body {
     box-shadow: 0 4px 12px rgba(15, 118, 110, 0.3);
 }
 
+
+
+.action-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #0F172A;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.action-item i {
+    font-size: 18px;
+}
+
+.action-item:hover {
+    color: #0B5ED7;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
@@ -226,17 +344,6 @@ body {
 
     background-image: url('/images/banner02.jpg') center/cover no-repeat;
 
-    /* height: 100vh;
-    margin-top: 80px;
-    padding: 80px 0;
-    align-items: center; */
-    /* Centre verticalement */
-    /* justify-content: center; */
-    /* Centre horizontalement */
-    /* text-align: center;
-    position: relative;
-    background: linear-gradient(135deg, #f0fdfa 0%, #ecfeff 100%);
-    overflow: hidden; */
 }
 
 
@@ -390,9 +497,9 @@ border: 1px solid rgba(255,255,255,0.2);          /* effet flou */
 
 /* 6. Adaptation Mobile */
 @media (max-width: 768px) {
-    .search-wrapper {
+    /* .search-wrapper {
         width: 90%;
-    }
+    } */
 }
 /* END STYLE SEARCH */
 

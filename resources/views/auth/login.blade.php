@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>Log In | Tapeli - Responsive Admin Dashboard Template</title>
+    <title>Log In</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc." />
     <meta name="author" content="Zoyothemes" />
@@ -41,12 +41,14 @@
                                         @csrf
                                         <div class="form-group mb-3">
                                             <label for="emailaddress" class="form-label">Email address</label>
-                                            <input class="form-control" type="email" id="emailaddress" required="" placeholder="Enter your email">
+                                            <input class="form-control" type="email" name="email" id="emailaddress" required="" placeholder="Enter your email">
+                                            <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                         </div>
 
                                         <div class="form-group mb-3">
                                             <label for="password" class="form-label">Password</label>
-                                            <input class="form-control" type="password" required="" id="password" placeholder="Enter your password">
+                                            <input class="form-control" type="password" name="password" required="" id="password" placeholder="Enter your password">
+                                            <x-input-error :messages="$errors->get('password')" class="mt-2" />
                                         </div>
 
                                         <div class="form-group d-flex mb-3">
