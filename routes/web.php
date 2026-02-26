@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SocialAuthController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PrescriptionController;
@@ -34,6 +34,10 @@ Route::post('/contact/demande', [ContactController::class, 'store'])->name('cont
 Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
 Route::delete('/wishlist/remove/{id}', [WishlistController::class, 'remove'])->name('wishlist.remove');
 
+
+// Reseaux sociau_Google & Apple
+Route::get('/auth/{provider}', [SocialAuthController::class, 'redirect']);
+Route::get('/auth/{provider}/callback', [SocialAuthController::class, 'callback']);
 
 
 Route::middleware('auth')->group(function () {

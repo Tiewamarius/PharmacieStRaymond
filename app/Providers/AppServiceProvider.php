@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Laravel\Socialite\Facades\Socialite;
+use SocialiteProviders\Apple\Provider as AppleProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,5 +22,14 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        Socialite::extend('apple', function ($app) {
+            $config = $app['config']['services.apple'];
+            return new AppleProvider(
+                $app['request'],
+                $config['client_id'],
+                $config['client_secret'],
+                $config['redirect']
+            );
+        });
     }
 }
