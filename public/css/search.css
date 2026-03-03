@@ -224,3 +224,105 @@
         height: 150px;
     }
 }
+
+/* Style de banner pub et promo */
+
+    .hero-banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1a002d, #4b0f5f);
+    color: white;
+    padding: 60px 0;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-left img {
+    max-width: 500px;
+    height: auto;
+}
+
+.banner-right {
+    max-width: 600px;
+}
+
+.banner-right h1 {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.banner-right h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.brand-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand-box img {
+    height: 50px;
+}
+
+.cta-btn {
+    background: #f4a04d;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: #ff8c2a;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background: #ccc;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: white;
+}
+
+ 
+/* Responsive */
+@media(max-width: 992px){
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .banner-left img {
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+
+    .banner-right h1 {
+        font-size: 40px;
+    }
+}
+
