@@ -75,5 +75,41 @@
             </div>
         </div>
     </main>
+
+
+</div>
+
+<!-- Section pub et promo -->
+<div class="hero-banner">
+    <div class="banner-slider">
+
+        <!-- Slide -->
+        <div class="banner-slide active">
+            <div class="banner-content container">
+
+                <div class="banner-left">
+                    <img src="{{ asset("Img/banner.jpg")}}" alt="Ergynuit Produits">
+                </div>
+
+                <div class="banner-right">
+                    <h1>ERGYNUIT<sup>®</sup></h1>
+                    <h2>LE SOMMEIL DONT VOUS RÊVEZ</h2>
+
+                    <div class="brand-box">
+                        <img src="{{ asset("Backendtheme/assets/images/icons8-online-pharmacy-64.png")}}" alt="Nutergia">
+                        <a href="#" class="cta-btn">J’en profite</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation dots -->
+    <div class="slider-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+    </div>
 </div>
 @endsection

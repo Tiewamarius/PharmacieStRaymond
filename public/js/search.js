@@ -77,4 +77,32 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("Recherche de : " + val);
         // Filtrer les cartes produits affichées
     });
+
+
+    // script banner pub et marketing
+    
+    const slides = document.querySelectorAll(".banner-slide");
+    const dots = document.querySelectorAll(".dot");
+    let current = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        dots.forEach(dot => dot.classList.remove("active"));
+
+        slides[index].classList.add("active");
+        dots[index].classList.add("active");
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            current = index;
+            showSlide(current);
+        });
+    });
+
+    // Auto slide
+    setInterval(() => {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+    }, 5000);
 });
